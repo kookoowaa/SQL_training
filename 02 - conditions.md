@@ -28,10 +28,6 @@
 
 
 
-
-
-
-
 ## 3. 실습
 1. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_stations` 테이블 정보를 확인
 2. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_trips` 테이블에서 출발지와 도착지 정보를 확인
