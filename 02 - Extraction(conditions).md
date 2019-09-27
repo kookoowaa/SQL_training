@@ -26,6 +26,8 @@
 |예시|`SELECT top(5) * FROM table`|`SELECT * FROM table LIMIT 5`|
 |결과| 1~5번째 행까지의 데이터| 끝에서 5번째부터 끝까지의 데이터|
 
+## 2. WHERE
+- SQL에서 가장 중요하다고 해도 과언이 아닌 구문
 
 
 ## 3. 실습
