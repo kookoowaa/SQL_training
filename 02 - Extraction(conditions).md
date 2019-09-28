@@ -29,6 +29,12 @@
 ## 2. WHERE
 - SQL에서 가장 중요하다고 해도 과언이 아닌 구문
 
+## 3. WHERE의 조건문
+### 가. =
+### 나. >, <, <>
+### 다. LIKE
+### 라. IN
+### 마. NOT
 
 ## 3. 실습
 1. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_stations` 테이블 정보를 확인
