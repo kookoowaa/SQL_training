@@ -124,10 +124,4 @@ WHERE
 
 
 ## 4. 과제
-- CSC의 SQL Server로부터 아래 테이블에 접속하여 테이블이 제공하는 정보 파악
-
->- `calldetail_viw`
->- `InteractionWrapuip`
->- `IWrkgrpQueueStats`
->- `AgentServiceLevel_viw`
->- `AgentActivityLog`
+- tbd
