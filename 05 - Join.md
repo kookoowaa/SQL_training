@@ -52,4 +52,23 @@ RIGHT JOIN
 - 단, 어디까지나 상대적이지만, 최근 하드웨어의 성능 향상으로 이를 체감하기는 쉽지 않음
 - **non-equi join**의 경우 `=` 조건 대신에 `>`나 `<`같은 비교 연산자를 활용하고, 일치 여부를 확인하는 것이 아니기 때문에 연산에 훨씬 적은 시간이 소요됨
 - 이 경우 조건에 일치하는 데이터를 중복으로 병합한다는 특징이 있음
+```sql
+FROM
+  UserInformation as t1
+RIGHT JOIN
+  PlayLog as t2
+  ON
+    t2.PlayTime > 10
+```
+- 위의 예제와 같이 non-equi join문 구현 시 1) `PlayLog`에서 `PlayTime`이 10 이상인 행을 먼저 추출한 다음, 2) `t2`의 **각 행**을 `t1` 테이블에 중복으로 연결
+|t2.Id|t2.PlayTime|t1.email|t1.phonenumber|
+|---|---|---|---|
+|1|17|abcd@gmail.com|1234|
+|1|17|efgh@gmail.com|5678|
+|1|17|ijkl@gmail.com|9012|
+|1|17|mnop@gmail.com|3456|
+|2|100|abcd@gmail.com|1234|
+|2|100|efgh@gmail.com|5678|
+|2|100|ijkl@gmail.com|9012|
+|2|100|mnop@gmail.com|3456|
 - 참조: https://www.w3resource.com/sql/joins/perform-a-non-equi-join.php
