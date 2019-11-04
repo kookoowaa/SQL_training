@@ -61,6 +61,8 @@ RIGHT JOIN
     t2.PlayTime > 10
 ```
 - 위의 예제와 같이 non-equi join문 구현 시 1) `PlayLog`에서 `PlayTime`이 10 이상인 행을 먼저 추출한 다음, 2) `t2`의 **각 행**을 `t1` 테이블에 중복으로 연결
+- 아래 예제를 보면 조건에 부합하는 `t2`의 행이 반복됨을 확인할 수 있음
+
 |t2.Id|t2.PlayTime|t1.email|t1.phonenumber|
 |---|---|---|---|
 |1|17|abcd@gmail.com|1234|
@@ -71,4 +73,5 @@ RIGHT JOIN
 |2|100|efgh@gmail.com|5678|
 |2|100|ijkl@gmail.com|9012|
 |2|100|mnop@gmail.com|3456|
+
 - 참조: https://www.w3resource.com/sql/joins/perform-a-non-equi-join.php
