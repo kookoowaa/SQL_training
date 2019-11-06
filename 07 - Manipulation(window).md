@@ -102,4 +102,5 @@ WHERE
 ORDER BY
     Call_number
 ```
-- 아래 예제처럼 중첩문으로 SQL 쿼리를 작성하는 것도 가능하니 참고
+- 아래 그림을 참조하면 `LEAD()`, `PARTITION BY`의 작동원리를 보다 쉽게 이해할 수 있음
+![](ref_window_function.png)
