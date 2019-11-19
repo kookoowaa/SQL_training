@@ -11,3 +11,5 @@
 ## 1. CASE WHEN
 
 ## 2. WITH
+
+## 3. Declare
