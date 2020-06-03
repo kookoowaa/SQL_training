@@ -80,7 +80,7 @@ ORDER BY
 2. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_trips` 테이블에서 출발지와 도착지 정보를 확인
 - 참조: DB와 데이터세트와 테이블을 연결하는 연산자로 `.`(마침표)를 사용 `bigquery-public-data.austin_bikeshare.bikeshare_stations` 
 
-## 5. 과제
+## 5. 과제 (SQL server)
 - CSC의 SQL Server로부터 아래 테이블에 접속하여 테이블이 제공하는 정보 파악
 
 >- `calldetail_viw`
