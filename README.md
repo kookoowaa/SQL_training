@@ -1,4 +1,4 @@
 # SQL_training
-- Repository created Sept. 26
-- SQL training for beginners with Google BigQuery and MSSQL
-- Beginner training for IKEA Korea
+- Repository created Sept. 26, 2019
+- SQL training for beginners (for the use of light weighted on-prmise database)
+- Tools used for this session: SQL, DBeaver, python
