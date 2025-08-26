@@ -64,7 +64,20 @@ insert into @menu(menu, price) values
 
 select * from @menu
 ```
-## 3. UNION
+
+## 3. With
+- `DECLARE`와 유사하지만, `WITH`의 경우 Nested query문을 작성할 때 용이
+- Nested query문이라 함은 여러개의 SQL 문을 중첩으로 사용하는 것을 의미하며, 이 때 상위 procedure에서 호출한 qeury문을 `WITH`로 정의, 재상용 할 수 있음
+- `WITH`의 용법은 아래와 같음:
+```sql
+--용법 (단일값)
+With tbl_sample as (
+SELECT ....
+)
+```
+
+
+## 4. UNION
 - `JOIN`을 활용하면 복수의 테이블을 동일 조건의 열 기준으로 병합하며, 이 때 **가로 방향으로** 테이블을 확장
 - `UNION`의 경우 **같은 칼럼**을 갖는 복수의 테이블을 **세로로 확장**
 - `UNION`만 활용할 경우 중복값은 제외, `UNION ALL` 활용 시 중복값을 포함하여 테이블을 확장
@@ -89,10 +102,3 @@ from
 union
 	menu
 ```
-
-
-
-## 4. 기타 함수
- 1) `DISTINCT`: 지정한 칼럼에 유효한 값들을 중복 없이 반환, python의 `unique`, excel의 `중복된 항복 제거`와 동일한 기능 제공
- 2) 
-
