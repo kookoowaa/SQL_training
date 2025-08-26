@@ -10,24 +10,23 @@
 
 ### DB의 종류
 - 99.999% 이상의 경우 다른 프로그래밍 언어가 아닌, SQL로 DB를 관리
-- DB(이하 RDBMS)의 종류는 MYSQL, MSSQL, ORACLE, BIGQUERY 등 다양하며 속도, 가격, Query 난이도 등에 따라 사용 목적이 상이
-- 사용되는 SQL 방식도 미묘하게 다르긴 하지만, 한 종류의 SQL에 익숙해지면 다른 종류의 DB를 관리하는 것도 크게 어렵지 않음
-- 현재 IKEA의 Interaction Desktop이 사용하는 DB는 MSSQL로 Transact-SQL을 사용하며, 이번 과정에서는 Google의 BIGQUERY와 Standard-SQL을 주로 활용할 예정
+- DB(이하 RDBMS)의 종류는 SQLITE, MSSQL, BIGQUERY, Snowflake 등 다양하며 속도, 용량, 가격, Query 복잡성 등에 따라 사용 목적이 상이
+- 사용되는 SQL 방식도 미묘하게 다르긴 하지만, 한 종류의 SQL에 익숙해지면 다른 종류의 DB를 관리하는 것도 크게 어렵지 않음 (함수 차이)
+- 본 세션에서는 클라우드 기반의 SnowFlake와 가벼운 on-premise 기반의 DuckDB를 사용할 예정
 
 ### Query란?
-- Query란 한국어로 질의 자체를 의미
-- ICBM에서 파라미터를 정의하여 리포트를 요청하는 것도 Query이고, Google에서 검색하는 것도 Query이고, 사이트에서 로그인 하는 것도 Query의 일환
-- CSC에서는 일종의 Report 개념으로 사용하고 있는데, 이는 Query를 통해 반환된 결과값으로 해석하는 것이 적절 (외부와 커뮤니케이션 시)
+- Query란 한국어로 "질의" 자체를 의미
+- Power BI에서 파라미터를 정의하여 리포트를 요청하는 것도 Query이고, Google에서 검색하는 것도 Query이고, 사이트에서 로그인 하는 것도 Query의 일환
 - Structured Query Language는 DB를 관리하고 데이터를 주고 받는 방식을 표준화하고 (프로그래밍) 언어로 만든 것으로, DB에 데이터를 요청하는(관리하는) 행위 자체가 Query임
 
 ## 2. SQL 이해하기
-- 일반적인 SQL의 query문은 아래 6개의 명령어로 구성할 수 있음  
+- 일반적인 데이터 사용자 입장에서 SQL의 query문은 아래 6개의 명령어의 combination으로 구성할 수 있음  
 ```
 SELCT
 FROM
 WHERE
-HAVING
 GROUP BY
+HAVING
 ORDER BY
 ```
 - 그 중 query에서 필수적으로 요구되는 구문은 `SELECT`와 `FROM`, 2개이며 1회차에는 이 2가지 구문만으로 데이터를 추출하는 방법을 알아볼 예정
@@ -79,12 +78,3 @@ ORDER BY
 1. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_stations` 테이블 정보를 확인
 2. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_trips` 테이블에서 출발지와 도착지 정보를 확인
 - 참조: DB와 데이터세트와 테이블을 연결하는 연산자로 `.`(마침표)를 사용 `bigquery-public-data.austin_bikeshare.bikeshare_stations` 
-
-## 5. 과제 (SQL server)
-- CSC의 SQL Server로부터 아래 테이블에 접속하여 테이블이 제공하는 정보 파악
-
->- `calldetail_viw`
->- `InteractionWrapup`
->- `IWrkgrpQueueStats`
->- `AgentServiceLevel_viw`
->- `AgentActivityLog`
