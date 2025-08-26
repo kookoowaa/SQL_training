@@ -71,10 +71,7 @@ ORDER BY
 - 기본적으로 선택한 `열`로 구성된 `테이블`에서, 조건/필터를 활용하여 원하는 `행`의 값을 추출하는 구조로 구성
 - 조건/필터를 활용하는 방법은 2장에서 배울 `WHERE`, `GROUP BY` 등의 구문을 활용
 
-## 3. BigQuery 셋업
-- 실습 간 진행
-
-## 4. 실습
-1. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_stations` 테이블 정보를 확인
-2. Bigquery에서 제공하는 `bigquery-public-data` DB의 `austin_bikeshare` 데이터세트의 `bikeshare_trips` 테이블에서 출발지와 도착지 정보를 확인
-- 참조: DB와 데이터세트와 테이블을 연결하는 연산자로 `.`(마침표)를 사용 `bigquery-public-data.austin_bikeshare.bikeshare_stations` 
+## 3. 실습
+1. `sales` 테이블 정보를 확인
+2. `stylemaster` 테이블 정보를 확인
+- 참조: 우측 Database Navigation Pannel을 활용하면, 어떤 테이블이 존재하는지 확인할 수 있음
