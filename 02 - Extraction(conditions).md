@@ -22,12 +22,12 @@
 - 그리고 `TOP`은 `SELECT`문의 함수 형태로 사용되고, `LIMIT`는 query 하단에 `SELECT` 문과 동등한 레벨에서 사용됨
 - 아래 예시를 보면 확인 가능
 
-|구분|`TOP`|`LIMIT`|
+|구분|`LIMIT`|`TOP`|
 |---|---|---|
 |호환성|Standard SQL|Transact SQL|
 |사용 위치|`SELECT`문|query 끝 부분|
-|예시|`SELECT top(5) * FROM table`|`SELECT * FROM table LIMIT 5`|
-|결과| 1~5번째 행까지의 데이터| 끝에서 5번째부터 끝까지의 데이터|
+|예시|`SELECT * FROM table LIMIT 5`|`SELECT top(5) * FROM table`|
+|결과| 1~5번째 행까지의 데이터| 1~5번째 행까지의 데이터|
 
 ### `DISTINCT()`
 - 데이터를 살펴보는 효과적인 방법 중 하나로 `DISTINCT` 함수 활용 가능
@@ -69,4 +69,43 @@ WHERE
 |---|---|---|
 |=| 같다|`WHERE userid = 'chpar10'` 
 |!=| 같지 않다| `WHERE date != '2019-09-30'`
-|<인
+|<>| 같지 않다| `WHERE date <> '2019-09-30'`
+|<| 미만| `WHERE pickuptime < 31`
+|>=| 이상| `WHERE nCount >= 500`
+|like| 포함하다(문자)| `WHERE 이름 like 'PABLO PA%'`
+|in|포함하다(데이터)| `WHERE 이름 in ('Pablo', 'Chanwoo', 'Chan Woo')`
+
+### 복수의 조건문- 조건을 추가하고 싶은 경우는 `AND`를 활용
+- 예시: "서랍에 있는 연필 중 길이가 10cm 이상이고 색상이 빨간 연필을 찾고 싶음"
+
+```sql
+SELECT
+    연필
+FROM
+    서랍
+WHERE
+    길이 > 10
+    AND 색상 = '빨간색'
+```
+- 특정 컬럼에 **여러 조건**을 추가하고 싶은 경우는 `OR`를 활용
+- 예시: "서랍에 있는 연필 중 길이가 10cm 이상이고 색상이 빨갛거나 파란 연필을 찾고 싶음"
+```sql
+SELECT
+    연필
+FROM
+    서랍
+WHERE
+    길이 > 10
+    AND (색상 = '빨간색' OR 색상 = '파란색')
+```
+
+- 위와 동일한 결과는 `OR` 대신 `in`을 사용해서도 추출할 수 있음
+```sql
+SELECT
+    연필
+FROM
+    서랍
+WHERE
+    길이 > 10
+    AND 색상 in ('빨간색', '파란색')
+```
