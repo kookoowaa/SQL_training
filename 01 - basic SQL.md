@@ -5,19 +5,19 @@
 ### Before we start
 - SQL<sup>Structured Query Language</sup>은 RDBMS를 관리하기 위해 설계된 프로그래밍 언어
 - RDBMS<sup>Relation Database Management System</sup> 간단하게 설명해서, 엑셀처럼 행과 열로 이루어진 2차원 표가 담겨 있는 시스템을 의미
-- SQL이 RDBMS를 관리하기 위한 언어라고 하였는데, 데이터 관리라고 함은 단순히 데이터를 추출하는데 그치지 않고 생성하거나 권한을 부여하는 등 폭넓은 의미를 가지며, SQL도 단순히 데이터를 보기 위하는데 사용되지 않음
+- SQL이 RDBMS를 관리하기 위한 언어라고 하였는데, 데이터 관리라고 함은 단순히 데이터를 추출하는데 그치지 않고 생성하거나 권한을 부여하는 등 폭넓은 의미를 가짐
 - 단, 이번 과정은 데이터 추출에 국한하여 진행 될 예정
 
 ### DB의 종류
 - 99.999% 이상의 경우 다른 프로그래밍 언어가 아닌, SQL로 DB를 관리
 - DB(이하 RDBMS)의 종류는 SQLITE, MSSQL, BIGQUERY, Snowflake 등 다양하며 속도, 용량, 가격, Query 복잡성 등에 따라 사용 목적이 상이
-- 사용되는 SQL 방식도 미묘하게 다르긴 하지만, 한 종류의 SQL에 익숙해지면 다른 종류의 DB를 관리하는 것도 크게 어렵지 않음 (함수 차이)
+- 사용되는 SQL syntax도 미묘하게 다르긴 하지만, 한 종류의 SQL에 익숙해지면 다른 종류의 DB를 관리하는 것도 크게 어렵지 않음 (함수 차이)
 - 본 세션에서는 클라우드 기반의 SnowFlake와 가벼운 on-premise 기반의 DuckDB를 사용할 예정
 
 ### Query란?
 - Query란 한국어로 "질의" 자체를 의미
 - Power BI에서 파라미터를 정의하여 리포트를 요청하는 것도 Query이고, Google에서 검색하는 것도 Query이고, 사이트에서 로그인 하는 것도 Query의 일환
-- Structured Query Language는 DB를 관리하고 데이터를 주고 받는 방식을 표준화하고 (프로그래밍) 언어로 만든 것으로, DB에 데이터를 요청하는(관리하는) 행위 자체가 Query임
+- Structured Query Language는 DB를 관리하고 데이터를 주고 받는 방식을 표준화하고 이를 프로그래밍 언어로 만든 것으로, DB에 데이터를 요청하는(관리하는) 행위 자체가 Query임
 
 ## 2. SQL 이해하기
 - 일반적인 데이터 사용자 입장에서 SQL의 query문은 아래 6개의 명령어의 combination으로 구성할 수 있음  
