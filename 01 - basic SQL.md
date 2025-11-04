@@ -72,6 +72,6 @@ ORDER BY
 - 조건/필터를 활용하는 방법은 2장에서 배울 `WHERE`, `GROUP BY` 등의 구문을 활용
 
 ## 3. 실습
-1. `sales` 테이블 정보를 확인
-2. `stylemaster` 테이블 정보를 확인 후 특정 컬럼 2개 호출
+1. `f_eland_sales` 테이블 정보를 확인
+2. `dim_style_master_v1` 테이블 정보를 확인 후 특정 컬럼 2개 호출
 - 참조: 우측 Database Navigation Pannel을 활용하면, 어떤 테이블이 존재하는지 확인할 수 있음
