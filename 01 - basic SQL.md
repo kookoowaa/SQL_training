@@ -5,7 +5,7 @@
 ### Before we start
 - SQL<sup>Structured Query Language</sup>은 RDBMS를 관리하기 위해 설계된 프로그래밍 언어
 - RDBMS<sup>Relation Database Management System</sup> 간단하게 설명해서, 엑셀처럼 행과 열로 이루어진 2차원 표가 담겨 있는 시스템을 의미
-- SQL이 RDBMS를 관리하기 위한 언어라고 하였는데, 데이터 관리라고 함은 단순히 데이터를 추출하는데 그치지 않고 생성하거나 권한을 부여하는 등 폭넓은 의미를 가짐
+- SQL이 RDBMS를 관리하기 위한 언어라고 하였는데, RDBMS 관리라고 함은 단순히 데이터를 추출하는데 그치지 않고 생성하거나 권한을 부여하는 등 폭넓은 의미를 가짐
 - 단, 이번 과정은 데이터 추출에 국한하여 진행 될 예정
 
 ### DB의 종류
